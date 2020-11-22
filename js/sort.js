@@ -37,14 +37,10 @@ async function quickSortPartition(arr, start, end) {
 
     if (arr[i] < pivotValue) {
       await swap(arr, i, pivotIndex);
-      states[pivotIndex] = 3;
-      // await sleep(sleepDelay);
+      states[pivotIndex] = 3;      
       pivotIndex++;    
-    } //else {
-      // await sleep(sleepDelay);
-    // }    
-  }
-  // states[start] = 2;  
+    }    
+  }  
   states[end] = 2;
   await  swap(arr, pivotIndex, end);
   return pivotIndex;
@@ -60,9 +56,9 @@ async function mergeSort(arr, start, end) {
 
   await Promise.all([
     mergeSort(arr, start, mid),
-    // mergeSort(arr, mid + 1, end)
-  ]);await Promise.all([
-    // mergeSort(arr, start, mid),
+  ]);
+  
+  await Promise.all([    
     mergeSort(arr, mid + 1, end)
   ]);
 
@@ -85,20 +81,18 @@ async function mergeSort(arr, start, end) {
         arr.splice(left, 0, temp);
         left ++;        
         right ++;
-        mid ++;
-        // await sleep(sleepDelay);  
+        mid ++;          
     }
     else {
       states[left] = -1;
       states[right] = 1;
-      left ++;      
-      // await sleep(sleepDelay);  
+      left ++;  
     }        
   }
 
   for (let i = left; i <= end; i++) {
       states[i] = -1;
-    }
+  }
 }
 
 async function bubbleSort(arr) {
@@ -107,12 +101,10 @@ async function bubbleSort(arr) {
   }
   for (let i = 0; i < arr.length; i++){
     for (let j = 0; j < arr.length-i-1; j++){        
-      states[j] = 0;
-      // states[j+1] = 0;
+      states[j] = 0;      
       await sleep(sleepDelay);
       if (arr[j] > arr[j+1]) {       
-        swap(arr, j, j+1);   
-        // await sleep(sleepDelay);     
+        swap(arr, j, j+1);
       }
       states[j] = 1;
       states[j+1] = -1;
@@ -130,14 +122,12 @@ async function insertionSort(arr) {
   for (let i = 0; i < arr.length; i++) {
     let j = i - 1;
     while (j >= 0) {
-      // states[j] = 0;
       states[j+1] = 0;
       await sleep(sleepDelay);
       states[j] = -1;
       states[j+1] = -1; 
       if (arr[j] > arr[j+1]) {   
         swap(arr, j, j+1);
-        // await sleep(sleepDelay);
         j--;
       } else {
         break;
