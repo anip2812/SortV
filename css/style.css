@@ -1,0 +1,60 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: #323232;
+}
+
+canvas {
+  display: block;
+}
+
+nav {
+	display: flex;
+	height: 50px;
+	justify-content: right;
+	align-items: center;	
+	background-color: gray;
+}
+
+button {
+	background: none;
+	background: dimgray;
+	border: 1px solid dimgray;
+	margin: 4px;
+	color: white; 
+	width: 75px;
+	height: 40px;	
+	border-radius: 4px;  
+	transition: .1s;
+	overflow: hidden;
+	
+}
+
+button:active{
+	background: darkgray;
+	border: 1px solid darkgray;
+	margin: 4px;
+	color: white; 
+	width: 75px;
+	height: 40px;	
+	border-radius: 4px;  
+	transition: .1s;
+	overflow: hidden;
+}
+
+a {
+	color: white;
+}
+
+input {
+	width: 64px;
+	-webkit-appearance: none;
+	height: 3px;
+	margin-right: 24px;
+}
+
+p {
+	width: 96px;
+	margin-bottom: 24px;
+}

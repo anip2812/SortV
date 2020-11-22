@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="en"><head>
+    <script src="js/p5.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/sort.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <nav>    		
+    	<button onclick="bubbleSort(values)">Bubble Sort</button>
+        <button onclick="selectionSort(values)">Selection Sort</button>
+        <button onclick="insertionSort(values)">Insertion Sort</button>
+    	<button onclick="mergeSort(values, 0, values.length - 1)" >Merge Sort</button>    	
+    	<button onclick="quickSort(values, 0, values.length - 1)" >Quick Sort</button>
+    	 	
+    </nav>
+    
+    <nav>
+        <p>Array Size:</p>      
+        <input oninput="changeWidth(this.value)" type="range" min="0" max="100">      	
+	    <p>Sorting Speed:</p>	    
+    	<input oninput="changeSpeed(this.value)" type="range" min="0" max="100">    	
+    	<button onclick="setup()">Randomize Array</button>
+    </nav>
+</body></html>
