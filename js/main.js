@@ -3,7 +3,8 @@ let w = 10;
 let states = [];
 let sleepDelay = 10;
 
-
+const button = document.querySelectorall('button')
+const input = document.querySelectorall('input')
 
 
 function setup() {
@@ -45,10 +46,15 @@ function changeWidth(range) {
    setup();
 }
 
-
 function changeSpeed(range) {   
    sleepDelay = (100-range)*10;   
 }
+
+
+
+
+
+
 
 
 
@@ -64,7 +70,7 @@ async function swap(arr, a, b) {
   let temp = arr[a];
   arr[a] = arr[b];
   arr[b] = temp;
-  //await sleep(sleepDelay);
+  // await sleep(sleepDelay);
   
 }
 
