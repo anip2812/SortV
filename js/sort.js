@@ -170,7 +170,7 @@ async function selectionSort(arr) {
     if (min != i) {
       swap(arr, i, min);
     }
-    states[i] = -1;    
     states[min] = 1;  
+    states[i] = -1;        
   }
 }
