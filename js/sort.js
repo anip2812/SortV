@@ -110,7 +110,6 @@ async function bubbleSort(arr) {
       states[j+1] = -1;
     }
   }
-  states[j] = -1;
 }
 
 async function insertionSort(arr) {
